@@ -1,21 +1,24 @@
-message = " This is my first python variable "
-another_message = " I am really, really, really happy "
 
-# print() -> use to show messages in terminal
-# print() -> se utiliza para mostrar mensajes en la terminal
-print(message)
-print(another_message)
-print(message, another_message, message)
-print(another_message, message)
-message = "I love Python"
-print(message)
+
+
+
+jhonatan_message = "Hola soy Jhonatan y estoy aprendiendo a usar python. "
+print(jhonatan_message)
+print(jhonatan_message)
 
 """
-Los nombres de variables en python deben nombrarse sonlo con: 
+Es un registro de donde el inerprete
+      tuvo problemas al intentar ejecutar su codigo.
+      
+      
+      Ejemplo:
+      
+       File "C:/Users/Jhonatan/project/metodologia_de_la_programacion_/src/understanding_variables.py", line 6, in <module>
+    print(jhonatan_mesage)
+          ^^^^^^^^^^^^^^^
+NameError: name 'jhonatan_mesage' is not defined. Did you mean: 'jhonatan_message'?
 
-  - Letras, numero y gion bajo (espacios)
-  - Deben comenzar con una letra o un guion bajo, pero nno con un numero:
-    ejemplo correcto: messaje_1
-
-
+   Name error : significs que olvidamos establecer el valor de una 
+     variable antes de utilizar o cometimos un error al ingresar 
+     el nombre de la variable.   
 """
