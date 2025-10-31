@@ -48,3 +48,48 @@ full_name=first_name+last_name
 print(full_name)
 
 print("Hola,"+full_name.title()+"!")
+
+# Syntax errror con strings
+message = "Una fortaleza de python es su comunidad"
+print(message)
+
+message = "Una fortaleza de 'Python' es su comunidad"
+print(message)
+
+
+# Concatenación  con f-strings 
+famous_person = "Jhonatan Herrera"
+quote = "Python is love"
+
+message= famous_person + " una vez dijo " + quote  
+print(message)
+
+# Concatenacion con fstrings
+"""
+()- se llama parentesis
+{}- se llama llaves
+[]- se llama corchetes
+
+"""
+message_f_string= f"{famous_person} una vez dijo {quote}"
+print(message_f_string)
+
+#Actividad
+"""
+    1) Elige un personahe famoso e igialalo a una variable del tipo strings
+    2) Elige una frase famosa que haya dicho e igualala a una variable del tipo string
+    3) Genera un mensaje con las dos variables utilisando f-string
+    4) Ibprime el mensaje
+"""
+
+famous_person= "Lionel Messi"
+quote= "¿Que miras bobo?, andá pa' allá bobo¡"
+
+message_f_string = f"{famous_person} una vez dijo {quote}"
+print(message_f_string)
+
+famous_person= "Jorje Carvajal"
+quote= "Si no es en el monte no cuenta"
+
+message_f_string = f"{famous_person} una vez dijo {quote}"
+print(message_f_string)
