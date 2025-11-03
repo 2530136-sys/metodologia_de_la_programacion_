@@ -93,3 +93,45 @@ quote= "Si no es en el monte no cuenta"
 
 message_f_string = f"{famous_person} una vez dijo {quote}"
 print(message_f_string)
+
+
+
+# Whitespaces
+"""
+   Whitespace se refiere a cualquier caracter que no se impriome, es decir, un tabulador y finales de linea. Los whitespaces se utilizan comunmente
+   para organizarlas salidas (prints) de tal manera que sea mas amigable de leer o ver para los usuarios.
+"""
+
+# Ejempos
+print("Python")
+print("\tPython")
+print("\t\tPython")
+
+
+# Ejemplo del salto de lines
+print("Lenguajes:\nPython\nC\nJavaScript")
+print("Jhonatan")
+print("Tovar")
+
+
+
+message = """
+     Esta clase es de programacion 
+    
+     mis alumnos son buena onda 
+                               
+                                Metodologia de la proramacion
+
+
+"""
+print(message)
+
+message="\n\tEsta clase es de programacion\n\t\tmis alumnos son buena onda\n\t\t\t\t\t\t\tMetodologia de la proramacion\n"
+print(message)
+
+# Eliminacion de espacios en blanco
+programminng_lenguages= " Python "
+print(programminng_lenguages)
+print(programminng_lenguages.lstrip())
+print(programminng_lenguages.rstrip())
+print(programminng_lenguages.strip())
