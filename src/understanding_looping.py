@@ -17,7 +17,35 @@ print("Gracias a todos. Fue un gran espectaculo")
 """
 
 
-
-# No olvidemos identar (donde se necesita)
+# No olvdeimos identar (donde se necesita)
 # Ejemplo
-magicans = ['alice']
+magicians = ["alice", "david", "jorge"]
+for magician in magicians:
+# print(magician) # Error  - el for necesita al menos un elementos
+    print(magician) # Solución
+
+
+# Identención Error
+# Logical error -
+magicians = ["alice", "david", "jorge", "Candelario"]
+for magician in magicians:
+    print(magician)
+# print(f"Great {magician}!, I can't wait to see your next trick")
+    print(f"Great {magician}!, I can't wait to see your next trick")
+
+# Identación innecesaria
+message = "Hola Charly"
+# print(message) # error de identacíon innecesaria
+
+# Logical error 
+magicians = ["alice", "david", "jorge", "Candelario"]
+for magician in magicians:
+    print(magician)
+    print(f"Great {magician}!, I can't wait to see your next trick")
+print("Thank you everyone, that was a great magic show!") # Solución indentar  a la izquierda
+
+# Error de syntaxis
+# Logical error -
+magicians = ["alice", "david", "jorge", "Candelario"]
+for magician in magicians: # (SyntaxError): olvidar los dos puntos (:)
+    print(magician)
