@@ -53,5 +53,5 @@ print("Valor minnimo:", min(digits)) # Salida: 0
 print("Valor maximo:", max(digits)) # Salida: 9
 print("Suma de todos los valores:", sum(digits)) # Salida: 45
 
-squares_list_comprentension = [num ** 2 for num in range(10)]
+squares_list_comprentension = [num ** 2 for num in range(11)]
 print(squares_list_comprentension)

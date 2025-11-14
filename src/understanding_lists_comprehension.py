@@ -14,6 +14,6 @@ even_number_0_100 = list(range(0, 101, 2))
 print(even_number_0_100)
 
 # Numeros pares utilizando list comprehension
-evens_list_compre = [value **2 for value in range (0,101)]
+evens_list_compre = [value for value in range (0,101) if value%2 == 0]
 print('evens list comprehension: ', evens_list_compre)
 
