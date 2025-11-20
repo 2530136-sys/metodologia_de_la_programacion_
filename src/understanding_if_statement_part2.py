@@ -47,4 +47,13 @@ else:
     print('No hay pozole')
 
 
+# Entradas 
+age = int(input("Ingresa tu edad: "))
+if age < 4:
+     print("Tu entrada es gratuita.")
+elif age <= 18 and age > 4:
+     print("El costo de tu entrada es de $200.")
+elif age > 18:
+     print("El costo de tu entrada es de $400.")
+     
 
