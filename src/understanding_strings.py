@@ -34,12 +34,6 @@ print(name.lower())
 
 
 
-
-
-
-
-
-
 #Concatenacón de STINGS
 print("Concatenación de stings")
 first_name= "Jhonatan"
