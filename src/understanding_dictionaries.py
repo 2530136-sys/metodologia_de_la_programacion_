@@ -44,3 +44,68 @@ for key in favorite_languages.keys():
 ## Listas de diccionarios
 ## Listas en diccionarios
 ## Diccionarios en diccionarios
+
+## Listas de diccionarios
+covenant_grunt = {
+    "color": "orange",
+    "weapon": "plasma-gun",
+    "armament": "plasma-granade",
+    "health": 7,
+}
+
+covenant_jackal = {
+    "color": "blue",
+    "weapon": "plasma-sword",
+    "armament": "plasma-granade",
+    "health": 7,
+}
+
+covenant_elite = {
+    "color": "gray",
+    "weapon": "plasma-gun",
+    "armament": "plasma-granade",
+    "health": 5,
+}
+
+# Lista de diccionarios
+covenants = [
+    covenant_grunt,
+    covenant_elite,
+    covenant_jackal
+]
+
+for covenant in covenants:
+    print("\n", covenant)
+    for key, value, in covenant.items():
+        print(key, value)
+    print()
+
+## Listas en diccionarios
+studients = {
+    "jorge": ["reprobado","jaumave","toreto"],
+    "lizarriturri": ["aprobado", "cbtis271", "migajero"],
+    "issac": ["aprobado", "cbtis271", "crack estudiante"]
+}
+
+## Diccionarios en diccionarios
+sensors = {
+    "temperature": {
+        "id": "temp_1",
+        "location": "aula 105",
+        "value": 25,
+        "unit": "celsius",
+    },
+    "Humedad": {
+        "id": "hum_1",
+        "location": "aula 105",
+        "value": 60,
+        "unit": "percentaje",
+    }
+}
+
+print("Temperatura")
+print(sensors["humedad"]["value"])
+print("Ubicacion")
+print(sensors["humedad"]["location"])
+
+# Estudiar el metodo get() de los diccionarios.
