@@ -2,9 +2,40 @@
 Portada
 """
 
+
+# RESUMEN EJECUTIVO
+
+"""
+
+Un string en Python es una secuencia inmutable de caracteres Unicode utilizada para representar datos de texto.
+Las operaciones básicas incluyen concatenación, verificación de longitud, extracción de subcadenas, búsqueda de patrones
+y reemplazo de texto. Validar y normalizar entradas de texto es crucial para la consistencia de datos, seguridad
+y experiencia de usuario en aplicaciones como validación de correos, verificación de contraseñas y formato de nombres.
+Este documento cubre seis problemas que demuestran técnicas de manipulación de strings con diseño claro de entradas/salidas,
+reglas de validación y casos de prueba exhaustivos.
+
+PRINCIPIOS Y BUENAS PRÁCTICAS
+
+- Los strings son inmutables: cualquier modificación crea un nuevo objeto string
+- Siempre normalizar la entrada con strip() y lower() antes de comparar
+- Evitar números mágicos en slicing; documentar qué extrae cada segmento
+- Usar métodos built-in de strings en lugar de reescribir lógica básica
+- Diseñar validaciones claras: primero verificar strings vacíos, luego validar formato
+- Escribir código legible con nombres de variables claros y mensajes de error comprensibles
+"""
+
+# =============================================================================
+# PROBLEM 1: Full name formatter (name + initials)
+# =============================================================================
+
 """
 Problema 1: Formateador de nombre completo
-Descripción: Formatea el nombre completo de una persona a Title Case y extrae las iniciales.
+
+Este código procesa un nombre completo ingresado por el usuario. Primero 
+valida que el nombre no esté vacío y que contenga al menos dos palabras. 
+Luego formatea cada palabra con mayúscula inicial y junta las iniciales de 
+cada palabra con puntos. Finalmente, muestra tanto el nombre formateado como 
+las iniciales completas con el formato adecuado.
 
 Entradas:
 - full_name (string): Nombre completo en cualquier caso con posibles espacios extra
@@ -40,9 +71,18 @@ print(f"Formatted name: {formatted_name}")
 print(f"Initials: {initials}")
 
 
+# =============================================================================
+# PROBLEM 2: Simple email validator (structure + domain)
+# =============================================================================
 """
 Problema 2: Validador simple de email
-Descripción: Valida el formato de un correo electrónico y extrae el dominio si es válido.
+
+Este código verifica la validez básica de un correo electrónico. Primero 
+comprueba que no esté vacío ni contenga espacios. Luego asegura que tenga 
+exactamente un símbolo '@' y que después de este exista un dominio válido 
+(que contenga al menos un punto y no comience con él). Finalmente, si pasa 
+todas las validaciones, imprime que el correo es válido y muestra la parte 
+del dominio; de lo contrario, indica que es inválido.
 
 Entradas:
 - email_text (string): Dirección de correo a validar
@@ -82,10 +122,19 @@ else:
     print("Valid email: true")
     print(f"Domain: {domain_part}")
 
+# =============================================================================
+# PROBLEM 3: Palindrome checker (ignoring spaces and case)
+# =============================================================================
 
 """
 Probema 3: Verificador de palíndromos
-Descripción: Verifica si una frase es un palíndromo ignorando mayúsculas/minúsculas y espacios.
+
+Este código verifica si una frase es un palíndromo (se lee igual al derecho y 
+al revés). Primero normaliza la frase eliminando espacios y convirtiéndola a 
+minúsculas, validando que tenga al menos 3 caracteres después de este proceso. 
+Luego compara la versión normalizada con su reverso para determinar si es 
+palíndromo. Finalmente muestra el resultado booleano y la frase normalizada 
+para referencia.
 
 Entradas:
 - phrase (string): Frase de texto a verificar
@@ -119,13 +168,19 @@ is_palindrome = normalized == normalized[::-1]
 print(f"Is palindrome: {str(is_palindrome).lower()}")
 print(f"Normalized: {normalized}")
 
-
+# =============================================================================
+# PROBLEM 4: Sentence word stats (lengths and first/last word)
+# =============================================================================
 
 """
 Problema 4: Estadísticas de palabras en oración
-Descripción: Analiza las palabras de una oración y proporciona estadísticas.
 
-Entradas:
+Este código analiza las propiedades básicas de una oración. Divide la oración 
+en palabras y valida que no esté vacía. Luego identifica la palabra más corta y 
+la más larga usando la función `len` como clave de comparación. Finalmente, 
+muestra el recuento de palabras, la primera y última palabra, así como las 
+palabras más corta y más larga encontradas.
+
 - sentence (string): Oración de entrada para analizar
 
 Salidas:
@@ -165,9 +220,19 @@ print(f"Shortest word: {shortest_word}")
 print(f"Longest word: {longest_word}")
 
 
+# =============================================================================
+# PROBLEM 5: Password strength classifier
+# =============================================================================
+
 """
 Problema 5: Clasificador de fortaleza de contraseña
-Descripción: Clasifica la fortaleza de una contraseña como débil, media o fuerte.
+
+Este código evalúa la fortaleza de una contraseña según su longitud y 
+complejidad. Primero verifica que no esté vacía, luego analiza si contiene 
+mayúsculas, minúsculas, dígitos y caracteres especiales. Clasifica la fortaleza 
+en tres niveles: débil si es corta o solo tiene minúsculas, fuerte si cumple 
+todos los criterios con al menos 8 caracteres, o media en cualquier otro caso 
+intermedio.
 
 Entradas:
 - password_input (string): Contraseña a evaluar
@@ -209,9 +274,20 @@ elif length >= 8 and has_upper and has_lower and has_digit and has_special:
 else:
     print("Password strength: medium")
 
+
+# =============================================================================
+# PROBLEM 6: Product label formatter (fixed-width text)
+# =============================================================================
+
 """
 Problema 6: Formateador de etiquetas de producto
-Descripción: Crea una etiqueta de producto con ancho fijo (30 caracteres).
+
+Este código genera una etiqueta formateada para un producto a partir de datos 
+ingresados por el usuario. Valida que el nombre no esté vacío y que el precio 
+sea un número positivo. Luego crea una cadena base con el nombre y precio con 
+dos decimales. Finalmente, ajusta la longitud de la etiqueta: la recorta si 
+supera 30 caracteres o la alinea a la izquierda si es más corta, mostrando el 
+resultado final entre comillas.
 
 Entradas:
 - product_name (string): Nombre del producto

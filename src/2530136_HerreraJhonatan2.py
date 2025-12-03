@@ -2,9 +2,72 @@
 Portada
 """
 
+# RESUMEN EJECUTIVO
+
+"""
+En Python, las listas, tuplas y diccionarios son estructuras de datos fundamentales:
+- Listas: Colecciones ordenadas y mutables que permiten almacenar elementos de diferentes tipos.
+- Tuplas: Colecciones ordenadas e inmutables, ideales para datos que no deben cambiar.
+- Diccionarios: Colecciones no ordenadas de pares clave-valor que permiten búsquedas rápidas.
+
+La mutabilidad de las listas significa que pueden modificarse después de su creación (agregar, eliminar, 
+modificar elementos), mientras que las tuplas son inmutables y no pueden cambiar una vez creadas.
+
+Los diccionarios asocian claves únicas con valores, permitiendo acceso eficiente mediante la clave.
+
+Este documento cubre 6 problemas prácticos que demuestran el uso de estas estructuras en contextos como 
+listas de compras, cálculos geométricos, catálogos de productos, sistemas de calificaciones, contadores 
+de frecuencia y agendas de contactos, incluyendo validaciones y casos de prueba.
+
+PRINCIPIOS Y BUENAS PRÁCTICAS
+
+- Usar listas cuando necesites agregar o eliminar elementos con frecuencia
+- Usar tuplas para datos que no deben cambiar (coordenadas, configuraciones)
+- Usar diccionarios cuando necesites buscar información por clave específica
+- Evitar modificar listas mientras se recorren con for
+- Usar nombres descriptivos para claves en diccionarios
+- Escribir código legible con mensajes claros al usuario
+"""
+
 # =============================================================================
 # PROBLEM 1: Shopping list basics (list operations)
 # =============================================================================
+
+"""
+Problem 1: Shopping list basics
+Description: Este código gestiona una lista de elementos. Primero solicita 
+elementos iniciales, uno nuevo para agregar y otro para buscar. Luego valida
+que los elementos iniciales no estén vacíos, crea una lista y añade el nuevo
+elemento si existe. Finalmente, verifica si el elemento a buscar está en la 
+lista y muestra todos los resultados, incluyendo la lista final y si el elemento 
+fue encontrado o no.
+
+Trabajar con una lista de productos (strings) y realizar operaciones básicas:
+1) Crear lista inicial a partir de string separado por comas
+2) Agregar nuevo producto al final
+3) Mostrar número total de elementos
+4) Verificar si un producto específico está en la lista
+
+Entradas:
+- initial_items_text (string): productos separados por comas
+- new_item (string): producto a agregar
+- search_item (string): producto a buscar
+
+Salidas:
+- "Items list:" <items_list>
+- "Total items:" <len_list>
+- "Found item:" true|false
+
+Validaciones:
+- initial_items_text no vacío después de strip()
+- new_item y search_item no vacíos después de strip()
+- Manejar caso de lista inicial vacía
+
+Casos de prueba:
+1) Normal: initial_items_text="apple, watermelon, banana", new_item="milk", search_item="banana"
+2) Borde: initial_items_text="apple", new_item="", search_item="apple" (new_item vacío)
+3) Error: initial_items_text="", new_item="milk", search_item="banana" (inicial vacío)
+"""
 
 initial_items_text = input("Enter inittial text (comma-separated): ").strip()
 new_item = input("Enter new item to add: ").strip()
@@ -28,6 +91,38 @@ print("Found item:", str(found).lower())
 # =============================================================================
 # PROBLEM 2: Points and distances with tuples
 # =============================================================================
+"""
+Problema 2: Puntos y distancias con tuplas
+
+Este código calcula la distancia y punto medio entre dos puntos en un 
+plano cartesiano. Solicita las coordenadas (x,y) de ambos puntos, las convierte
+a números y crea tuplas. Luego aplica el teorema de Pitágoras para calcular
+la distancia euclidiana y encuentra el promedio de las coordenadas para el
+punto medio. Finalmente muestra los resultados formateados o un error si se
+ingresan valores no numéricos.
+
+Descripción: 
+1) Crear dos tuplas point_a y point_b a partir de entradas numéricas
+2) Calcular distancia euclidiana entre puntos
+3) Calcular punto medio entre ellos
+
+Entradas:
+- x1, y1, x2, y2 (float): coordenadas de dos puntos
+
+Salidas:
+- "Point A:" (x1, y1)
+- "Point B:" (x2, y2)
+- "Distance:" <distance>
+- "Midpoint:" (mx, my)
+
+Validaciones:
+- Todas las entradas deben poder convertirse a float
+
+Casos de prueba:
+1) Normal: x1=0, y1=0, x2=3, y2=4 (distancia=5, punto_medio=(1.5, 2.0))
+2) Borde: x1=1.5, y1=2.5, x2=1.5, y2=2.5 (distancia=0, punto_medio=(1.5, 2.5))
+3) Error: x1="abc", y1=1, x2=2, y2=2 (entrada inválida)
+"""
 try:
     x1 = float(input("Enter x1: "))
     y1 = float(input("Enter y2: "))
@@ -50,11 +145,43 @@ except ValueError:
     print("Error: all coordinates must be valid numbers")
 
 
-
-
 # =============================================================================
 # PROBLEM 3: Product catalog with dictionary
 # =============================================================================
+
+"""
+Problema 3: Catálogo de productos con diccionario
+
+Este código funciona como un sistema de venta simple que calcula el precio total
+de productos. Consulta al usuario el nombre de un producto y la cantidad deseada,
+validando que los datos sean correctos. Busca el producto en un diccionario 
+predefinido de precios y, si existe, multiplica su precio unitario por la cantidad 
+solicitada. Finalmente muestra el desglose del cálculo o un mensaje de error si 
+el producto no se encuentra o los datos son inválidos.
+
+1) Crear diccionario inicial con productos y precios
+2) Leer nombre del producto y cantidad
+3) Calcular precio total si el producto existe
+
+Entradas:
+- product_name (string): nombre del producto a comprar
+- quantity (int): cantidad a comprar
+
+Salidas:
+- Si el producto existe: precio unitario, cantidad, precio total
+- Si no existe: mensaje de error
+
+Validaciones:
+- product_name no vacío después de strip()
+- quantity > 0
+- Verificar si el producto existe en el catálogo
+
+Casos de prueba:
+1) Normal: product_name="manzana", quantity=3 (existe en catálogo)
+2) Borde: product_name="plátano", quantity=1 (existe, cantidad mínima)
+3) Error: product_name="uva", quantity=2 (no está en catálogo)
+"""
+
 product_price = {
     "watermelon":25.0,
     "apple":10.0,
@@ -93,6 +220,36 @@ else:
 # =============================================================================
 # PROBLEM 4: Student grades with dict and list
 # =============================================================================
+"""
+Problema 4: Calificaciones de estudiantes con diccionario y lista
+Este código consulta y analiza las calificaciones de estudiantes almacenadas en 
+un diccionario. Solicita el nombre de un estudiante, verifica que exista y que tenga 
+calificaciones registradas. Luego calcula el promedio de sus notas y determina si 
+está aprobado (promedio ≥ 70). Finalmente muestra las calificaciones, el promedio 
+redondeado y su estado de aprobación, o un error si el estudiante no existe o 
+no tiene calificaciones.
+
+1) Crear diccionario con estudiantes y sus calificaciones
+2) Leer nombre del estudiante
+3) Calcular promedio de calificaciones y verificar si aprobó (>= 70.0)
+
+Entradas:
+- student_name (string): nombre del estudiante
+
+Salidas:
+- Si el estudiante existe: lista de calificaciones, promedio, estado de aprobación
+- Si no existe: mensaje de error
+
+Validaciones:
+- student_name no vacío después de strip()
+- Verificar si el estudiante existe
+- Verificar si la lista de calificaciones no está vacía
+
+Casos de prueba:
+1) Normal: student_name="alicia" (existe, calcular promedio)
+2) Borde: student_name="carlos" (existe, lista de calificaciones vacía)
+3) Error: student_name="david" (no está en el diccionario)
+"""
 
 student_grade = {
     "jhonatan":[90.0, 89.0, 99.0],
@@ -127,7 +284,38 @@ else:
 # =============================================================================
 # PROBLEM 5: Word frequency counter (list + dict)
 # =============================================================================
+"""
+Problema 5: Contador de frecuencia de palabras
 
+Este código analiza una oración para encontrar la palabra más
+frecuente. Primero convierte la oración a minúsculas, la divide en palabras
+y limpia signos de puntuación básicos. Luego cuenta la frecuencia de cada 
+palabra usando un diccionario. Finalmente identifica la palabra con el 
+conteo más alto y muestra la lista de palabras, sus frecuencias y la palabra 
+más común encontrada.
+
+1) Leer oración y convertir a minúsculas
+2) Dividir en lista de palabras
+3) Construir diccionario de frecuencias
+4) Encontrar palabra más común
+
+Entradas:
+- sentence (string): oración de entrada
+
+Salidas:
+- "Words list:" <words_list>
+- "Frequencies:" <freq_dict>
+- "Most common word:" <word>
+
+Validaciones:
+- sentence no vacío después de strip()
+- Manejar caso de lista de palabras vacía
+
+Casos de prueba:
+1) Normal: sentence="hola mundo hola python" (frec: hola=2, mundo=1, python=1)
+2) Borde: sentence="palabra" (una sola palabra)
+3) Error: sentence="" (entrada vacía)
+"""
 sentence = input("Enter a sentence: ").strip()
     
 
@@ -195,6 +383,40 @@ else:
 # =============================================================================
 # PROBLEM 6: Simple contact book (dictionary CRUD)
 # =============================================================================
+"""
+Problema 6: Agenda de contactos simple
+
+Este código implementa un gestor básico de contactos con tres funciones: añadir,
+buscar y eliminar. Primero valida que el nombre y la acción sean correctos. 
+Según la acción seleccionada, solicita datos adicionales (como el número telefónico)
+y realiza la operación correspondiente en un diccionario de contactos. Finalmente,
+muestra un resultado o mensaje de error según la operación realizada y la 
+existencia del contacto.
+
+1) Crear diccionario inicial de contactos
+2) Leer acción (AGREGAR, BUSCAR o ELIMINAR)
+3) Realizar operación correspondiente
+
+Entradas:
+- action_text (string): "AGREGAR", "BUSCAR" o "ELIMINAR"
+- name (string): nombre del contacto
+- phone (string): número telefónico (solo para AGREGAR)
+
+Salidas:
+- Para AGREGAR: mensaje de confirmación
+- Para BUSCAR: teléfono si existe, error si no
+- Para ELIMINAR: confirmación si existe, error si no
+
+Validaciones:
+- action_text debe ser una de las acciones válidas
+- name no vacío después de strip()
+- Para AGREGAR: phone no vacío después de strip()
+
+Casos de prueba:
+1) Normal: AGREGAR name="Juan", phone="1234567890"
+2) Borde: BUSCAR name="Alicia" (existe), ELIMINAR name="Roberto" (existe)
+3) Error: BUSCAR name="Desconocido" (no encontrado), acción inválida
+"""
 contacts = {
     "jhonatan": 834281568,
     "beto": 8321022050,
