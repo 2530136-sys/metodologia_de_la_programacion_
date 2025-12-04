@@ -1,7 +1,9 @@
 """
-Portada
+PORTADA
+Nombre: Jhonatan Israel Herrera Ibarra
+Matrícula: 2530136
+Grupo: 1-2
 """
-
 
 # RESUMEN EJECUTIVO
 
@@ -102,7 +104,7 @@ Casos de prueba:
 2) Borde: "a@b.co" -> "Valid email: true", "Domain: b.co"
 3) Error: "invalid.email" -> "Valid email: false"
 """
-
+# Simple email validator
 email_text = input("Enter email: ").strip()
 if not email_text:
     print("Valid email: false")
@@ -305,6 +307,7 @@ Casos de prueba:
 2) Borde: "Very long product name that exceeds", "10.00" -> Truncado a 30 caracteres
 3) Error: "", "abc" -> "Error: Invalid product name or price"
 """
+# Product label formatter
 product_name = input("Enter product name: ").strip()
 price_input = input("Enter price: ").strip()
     
@@ -339,12 +342,27 @@ Las validaciones previas al procesamiento evitan errores y aseguran datos limpio
 significa que cada operación crea nuevos objetos, lo que debe considerarse en aplicaciones de alto rendimiento.
 El diseño de casos de prueba exhaustivos (normal, borde, error) es vital para garantizar la robustez del código.
 
-REFERENCIAS
-
-1) Python documentation - Built-in Types: Text Sequence Type — str
-2) Real Python - Python String Methods
-3) GeeksforGeeks - Python String Methods
-4) W3Schools - Python Strings
-5) Python Tutorial - An Informal Introduction to Python - Strings
 """
 
+# REFERENCIAS
+
+"""
+1) Python Docs - String Type
+   https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+
+2) Real Python - String Methods
+   https://realpython.com/python-string-methods/
+
+3) W3Schools - Python Strings
+   https://www.w3schools.com/python/python_strings.asp
+
+4) GeeksforGeeks - String Methods
+   https://www.geeksforgeeks.org/python-string-methods/
+
+5) Lutz, M. Learning Python (O'Reilly, 2013)
+
+
+
+
+"""
+ 

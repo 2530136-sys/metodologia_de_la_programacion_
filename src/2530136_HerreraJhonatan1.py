@@ -1,8 +1,8 @@
 """
 PORTADA
-Nombre: [Tu Nombre]
-Matrícula: [Tu Matrícula]
-Grupo: [Tu Grupo]
+Nombre: Jhonatan Israel Herrera Ibarra
+Matrícula: 2530136
+Grupo: 1-2
 """
 
 # RESUMEN EJECUTIVO
@@ -344,9 +344,10 @@ except ValueError:
     print("Error: invalid input")
 
 
-"""
-CONCLUSIONES
 
+# CONCLUSIONES
+
+"""
 La integración de tipos enteros y flotantes en aplicaciones prácticas demuestra su complementariedad
 fundamental: los enteros para representar cantidades discretas y los flotantes para mediciones continuas
 que requieren precisión decimal. Esta combinación permite modelar eficientemente problemas del mundo real
@@ -369,17 +370,28 @@ demostrando la versatilidad y poder expresivo de estos conceptos fundamentales.
 El uso de nombres descriptivos para variables y la documentación clara del significado contextual de cada
 valor booleano contribuyen significativamente a la legibilidad y mantenibilidad del código, facilitando la
 colaboración entre desarrolladores y reduciendo la probabilidad de errores de interpretación.
+"""
 
-REFERENCIAS:
+# REFERENCIAS:
 
-1) Python documentation - Numeric Types: int, float, complex
-2) Python documentation - Boolean Operations: and, or, not
-3) Python documentation - Built-in Functions: min, max, round, abs
-4) Guttag, John V. - "Introduction to Computation and Programming Using Python" (MIT Press)
-5) Downey, Allen - "Think Python: How to Think Like a Computer Scientist" (O'Reilly)
-6) Real Python - "Python Numbers: int, float, complex" (Tutorial en línea)
-7) W3Schools - "Python Operators" (Referencia en línea)
-8) McKinney, Wes - "Python for Data Analysis" (O'Reilly) - Para aplicaciones de análisis numérico
+"""
+1) Python Software Foundation. (2023). "Built-in Types: Numeric Types — int, float, complex". 
+   Python Documentation. Recuperado de: https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 
-Repositorio de GitHub: [URL de tu repositorio de GitHub]
+2) Python Software Foundation. (2023). "Boolean Operations — and, or, not". 
+   Python Documentation. Recuperado de: https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not
+
+3) Guttag, J. V. (2021). "Introduction to Computation and Programming Using Python". 
+   3rd Edition. MIT Press.
+
+4) Downey, A. (2015). "Think Python: How to Think Like a Computer Scientist". 
+   2nd Edition. O'Reilly Media.
+
+5) Real Python. (2023). "Python Numbers: int, float, complex". 
+   Tutorial en línea. Recuperado de: https://realpython.com/python-numbers/
+
+6) World Health Organization (WHO). (2023). "Body Mass Index (BMI) Classification".
+   Recuperado de: https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
+
+   https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/2530136_HerreraJhonatan1.py
 """

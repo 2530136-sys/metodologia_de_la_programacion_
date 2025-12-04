@@ -1,5 +1,8 @@
 """
-Portada
+PORTADA
+Nombre: Jhonatan Israel Herrera Ibarra
+Matrícula: 2530136
+Grupo: 1-2
 """
 
 # RESUMEN EJECUTIVO
@@ -454,6 +457,42 @@ elif action_text == "DELATE":
 
 
 
+
+# CONCLUSIONES
+"""
+- Las listas son ideales cuando necesitamos colecciones ordenadas y modificables, permitiendo operaciones
+  flexibles como agregar, eliminar y modificar elementos.
+
+- Las tuplas son útiles para datos inmutables que no deben cambiar, como coordenadas o configuraciones,
+  proporcionando seguridad e integridad de datos.
+
+- Los diccionarios facilitan búsquedas rápidas mediante claves únicas, siendo eficientes para catálogos,
+  configuraciones y sistemas donde el acceso por identificador es fundamental.
+
+- La combinación de estas estructuras (como diccionarios de listas) permite modelar problemas complejos
+  de manera eficiente, como sistemas de calificaciones o inventarios.
+
+- Las validaciones son esenciales para garantizar la robustez del código, manejando casos bordes y errores
+  de entrada adecuadamente.
+
+- La elección entre lista, tupla o diccionario depende del uso específico: mutabilidad, orden y tipo de
+  acceso requerido.
+"""
+
+# REFERENCIAS
+
+"""
+1) Documentación de Python - Tipos Integrados: list, tuple, dict
+2) Tutorial de Python - Estructuras de Datos: https://docs.python.org/3/tutorial/datastructures.html
+3) Real Python - Listas y Tuplas en Python: https://realpython.com/python-lists-tuples/
+4) GeeksforGeeks - Diccionarios en Python: https://www.geeksforgeeks.org/python-dictionary/
+5) W3Schools - Tipos de Datos en Python: https://www.w3schools.com/python/python_datatypes.asp
+6) Python para Todos - Capítulo 9: Diccionarios
+7) Automatiza las Cosas Aburridas con Python - Capítulo 5: Diccionarios y Estructuración de Datos
+
+REPOSITORIO DE GITHUB
+
+"""
 
 
 
