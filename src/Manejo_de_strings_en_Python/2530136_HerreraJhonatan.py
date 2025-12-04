@@ -361,8 +361,11 @@ El diseño de casos de prueba exhaustivos (normal, borde, error) es vital para g
 
 5) Lutz, M. Learning Python (O'Reilly, 2013)
 
+REPOSITORIO GITHUB:
+https://github.com/2530136-sys/metodologia_de_la_programacion_
 
-
+Directo al archivo:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/2530136_HerreraJhonatan.py
 
 """
  
