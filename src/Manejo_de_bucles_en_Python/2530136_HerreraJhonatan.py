@@ -168,34 +168,33 @@ Casos de prueba:
 2) Borde: entradas: -1 → "Error: sin datos"
 3) Error: entradas: 10, "abc", 20, -1 → Cantidad: 2, Promedio: 15.0 (omite inválido)
 """
+def problema3():
+  SENTINEL = -1
+  numbers = []
 
-SENTINEL = -1
-numbers = []
+  while True:
+      try:
+          user_input = input("Enter a number (-1 to stop): ")
+          number = float(user_input)
 
-while True:
-    try:
-        user_input = input("Enter a number (-1 to stop): ")
-        number = float(user_input)
+          if number == SENTINEL:
+              break
+          numbers.append(number)
 
-        if number == SENTINEL:
-            break
+      except ValueError:
+          print("Error: invalid input")
 
-        numbers.append(number)
-
-    except ValueError:
-        print("Error: invalid input")
-
-if len(numbers) == 0:
+  if len(numbers) == 0:
     print("Erro: no data")
-    exit()
-        
-total_sum = sum(numbers)
-average = total_sum / len(numbers)
-        
-print(f"Count: {len(numbers)}")
-print(f"Average: {average:.2f}")
+    return
+    
+  total_sum = sum(numbers)
+  average = total_sum / len(numbers)
+          
+  print(f"Count: {len(numbers)}")
+  print(f"Average: {average:.2f}")
 
-
+problema3()
 
 # =============================================================================
 # Problem 4: Password attempts with while
@@ -271,7 +270,7 @@ Validaciones:
 - Solo 0, 1, 2, 3 son aceptadas como válidas
 
 Casos de prueba:
-1) Normal: elegir 1, luego 3, luego 2, luego 0 → mensajes apropiados
+1) Normal: elegir 1, luego 3, luego 2, luego 0 → Hello!, cuenta +1, counter = 1, Bye!
 2) Borde: elegir 0 inmediatamente → "¡Adiós!"
 3) Error: elegir "abc" → "Error: opción inválida"
 """
@@ -324,7 +323,12 @@ Validaciones:
 
 Casos de prueba:
 1) Normal: n = 4 → patrón de 4 filas
+*
+**
+***
+****
 2) Borde: n = 1 → una sola fila
+*
 3) Error: n = -2 → "Error: entrada inválida"
 """
 try:
@@ -384,7 +388,10 @@ except ValueError:
 
 
 REPOSITORIO GITHUB:
+https://github.com/2530136-sys/metodologia_de_la_programacion_
 
+Directo al archivo:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Manejo_de_bucles_en_Python/2530136_HerreraJhonatan.py
 
 """
 

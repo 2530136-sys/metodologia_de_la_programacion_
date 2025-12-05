@@ -67,7 +67,7 @@ Validaciones:
 - Manejar caso de lista inicial vacía
 
 Casos de prueba:
-1) Normal: initial_items_text="apple, watermelon, banana", new_item="milk", search_item="banana"
+1) Normal: initial_items_text="apple, watermelon, banana", new_item="milk", search_item="banana"->Items list: apple, watermelon, banana, milk - Total de items = 4, found items: true
 2) Borde: initial_items_text="apple", new_item="", search_item="apple" (new_item vacío)
 3) Error: initial_items_text="", new_item="milk", search_item="banana" (inicial vacío)
 """
@@ -180,9 +180,9 @@ Validaciones:
 - Verificar si el producto existe en el catálogo
 
 Casos de prueba:
-1) Normal: product_name="manzana", quantity=3 (existe en catálogo)
-2) Borde: product_name="plátano", quantity=1 (existe, cantidad mínima)
-3) Error: product_name="uva", quantity=2 (no está en catálogo)
+1) Normal: product_name="apple", quantity=3 (existe en catálogo) -> Unit price: 10 , Total: 30
+2) Borde: product_name="banana", quantity=1 (existe, cantidad mínima)-> Unit price: 5 , Total: 5
+3) Error: product_name="orange", quantity=2 (no está en catálogo)
 """
 
 product_price = {
@@ -249,14 +249,14 @@ Validaciones:
 - Verificar si la lista de calificaciones no está vacía
 
 Casos de prueba:
-1) Normal: student_name="alicia" (existe, calcular promedio)
-2) Borde: student_name="carlos" (existe, lista de calificaciones vacía)
+1) Normal: student_name="valeria" (existe, calcular promedio= 100 )
+2) Borde: student_name="beto" (existe, lista de calificaciones vacía)
 3) Error: student_name="david" (no está en el diccionario)
 """
 
 student_grade = {
     "jhonatan":[90.0, 89.0, 99.0],
-    "beto":[88.0, 75.0, 90.0],
+    "beto":[ ],
     "rodrigo":[68.0, 70.0, 71.0],
     "valeria":[100.0, 100.0, 100.0],
 }
@@ -315,7 +315,7 @@ Validaciones:
 - Manejar caso de lista de palabras vacía
 
 Casos de prueba:
-1) Normal: sentence="hola mundo hola python" (frec: hola=2, mundo=1, python=1)
+1) Normal: sentence="hola mundo hola python" (frec: hola=2, mundo=1, python=1)Most common word: Hola
 2) Borde: sentence="palabra" (una sola palabra)
 3) Error: sentence="" (entrada vacía)
 """
@@ -416,9 +416,9 @@ Validaciones:
 - Para AGREGAR: phone no vacío después de strip()
 
 Casos de prueba:
-1) Normal: AGREGAR name="Juan", phone="1234567890"
-2) Borde: BUSCAR name="Alicia" (existe), ELIMINAR name="Roberto" (existe)
-3) Error: BUSCAR name="Desconocido" (no encontrado), acción inválida
+1) Normal: AGREGAR name="jhonatan", phone="8342815368"
+2) Borde: BUSCAR name="beto" (existe), ELIMINAR name="nacho" (existe)
+3) Error: BUSCAR name="juan" (no encontrado), acción inválida
 """
 contacts = {
     "jhonatan": 834281568,
@@ -490,7 +490,12 @@ elif action_text == "DELATE":
 6) Python para Todos - Capítulo 9: Diccionarios
 7) Automatiza las Cosas Aburridas con Python - Capítulo 5: Diccionarios y Estructuración de Datos
 
-REPOSITORIO DE GITHUB
+REPOSITORIO GITHUB:
+https://github.com/2530136-sys/metodologia_de_la_programacion_
+
+Directo al archivo:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Manejo_de_Listas%2C_Tuplas_y_Diccionarios_en_Python/2530136_HerreraJhonatan.py
+
 
 """
 

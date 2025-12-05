@@ -52,7 +52,7 @@ Validaciones:
 - No puede ser solo espacios en blanco
 
 Casos de prueba:
-1) Normal: "juan carlos tovar" -> "Formatted name: Juan Carlos Tovar", "Initials: J.C.T."
+1) Normal: "jhonatan herrera ibarra" -> "Formatted name: Jhonatan Herrera Ibarra", "Initials: J.H.I."
 2) Borde: "  a  b  " -> "Formatted name: A B", "Initials: A.B."
 3) Error: "" -> "Error: Name cannot be empty"
 
@@ -100,7 +100,7 @@ Validaciones:
 - No puede contener espacios
 
 Casos de prueba:
-1) Normal: "user@example.com" -> "Valid email: true", "Domain: example.com"
+1) Normal: "jhonatan@gmail.com" -> "Valid email: true", "Domain: gmail.com"
 2) Borde: "a@b.co" -> "Valid email: true", "Domain: b.co"
 3) Error: "invalid.email" -> "Valid email: false"
 """
@@ -365,7 +365,7 @@ REPOSITORIO GITHUB:
 https://github.com/2530136-sys/metodologia_de_la_programacion_
 
 Directo al archivo:
-https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/2530136_HerreraJhonatan.py
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Manejo_de_strings_en_Python/2530136_HerreraJhonatan.py
 
 """
  

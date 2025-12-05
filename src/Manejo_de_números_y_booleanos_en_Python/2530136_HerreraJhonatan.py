@@ -115,8 +115,9 @@ try:
     hourly_rate = float(input("Enter hourly rate: "))
 
     if hours_worked < 0 or hourly_rate <= 0:
-        print("Error:invalid input")
-
+        print("Error: invalid input")
+        exit()
+        
     else:
         regular_hours = min(hours_worked, 40)
         overtime_hours = max(hours_worked - 40, 0)
@@ -393,5 +394,10 @@ colaboración entre desarrolladores y reduciendo la probabilidad de errores de i
 6) World Health Organization (WHO). (2023). "Body Mass Index (BMI) Classification".
    Recuperado de: https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
 
-   https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/2530136_HerreraJhonatan1.py
+REPOSITORIO GITHUB:
+https://github.com/2530136-sys/metodologia_de_la_programacion_
+
+Directo al archivo:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Manejo_de_n%C3%BAmeros_y_booleanos_en_Python/2530136_HerreraJhonatan.py
+
 """
