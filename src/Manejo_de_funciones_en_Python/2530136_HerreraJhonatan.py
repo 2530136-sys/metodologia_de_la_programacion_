@@ -77,23 +77,22 @@ def calculate_area(width, height):
 def calculate_perimeter(width, height):
     return 2 * (width + height)
 
-print("\nIngresa las dimensiones del rectángulo:")
+print("\nEnter dimension of the rectangle:")
 
 try:
-    width = float(input("Ancho del rectángulo: "))
-    height = float(input("Alto del rectángulo: "))
+    width = float(input("Enter width: "))
+    height = float(input("Enter height: "))
     
     if width > 0 and height > 0:
         area = calculate_area(width, height)
         perimeter = calculate_perimeter(width, height)
-        print(f"\nResultados:")
         print(f"Area: {area}")
         print(f"Perimeter: {perimeter}")
     else:
-        print("Error: invalid input (las dimensiones deben ser mayores a 0)")
+        print("Error: invalid input ")
         
 except ValueError:
-    print("Error: invalid input (debes ingresar números válidos)")
+    print("Error: invalid input ")
 
 # ============================================================================
 # PROBLEMA 2: Clasificador de Calificaciones
@@ -138,21 +137,18 @@ def classify_grade(score):
     else:
         return "F"
 
-print("\nIngresa la puntuación (0-100):")
-
 try:
-    score = float(input("Puntuación: "))
+    score = float(input("Enter score (0-100): "))
     
     if 0 <= score <= 100:
         category = classify_grade(score)
-        print(f"\nResultados:")
         print(f"Score: {score}")
         print(f"Category: {category}")
     else:
-        print("Error: invalid input (la puntuación debe estar entre 0 y 100)")
+        print("Error: invalid input")
         
 except ValueError:
-    print("Error: invalid input (debes ingresar un número válido)")
+    print("Error: invalid input")
 
 # ============================================================================
 # PROBLEMA 3: Estadísticas de Lista
@@ -196,31 +192,30 @@ def summarize_numbers(numbers_list):
 
 def process_numbers_text(numbers_text):
     if not numbers_text.strip():
-        print("Error: invalid input (texto vacío)")
+        print("Error: invalid input")
         return False
     
     try:
         numbers_list = [float(num.strip()) for num in numbers_text.split(",")]
         
         if len(numbers_list) == 0:
-            print("Error: invalid input (lista vacía)")
+            print("Error: invalid input")
             return False
         
         stats = summarize_numbers(numbers_list)
         
-        print(f"\nResultados:")
         print(f"Min: {stats['min']}")
         print(f"Max: {stats['max']}")
         print(f"Average: {stats['average']:.2f}")
         return True
         
     except ValueError:
-        print("Error: invalid input (formato incorrecto)")
+        print("Error: invalid input")
         return False
 
-print("\nIngresa números separados por comas (ejemplo: 10,20,30,15.5):")
+print("\nEnter numbers separded by commas: ")
 
-numbers_text = input("Números: ")
+numbers_text = input("Number: ")
 
 process_numbers_text(numbers_text)
 
@@ -262,27 +257,26 @@ def apply_discount(prices_list, discount_rate):
 
 def process_discount(prices_text, discount_rate):
     if not prices_text.strip():
-        print("Error: invalid input (texto vacío)")
+        print("Error: invalid input")
         return False
     
     if not (0 <= discount_rate <= 1):
-        print(f"Error: invalid input (tasa de descuento debe estar entre 0 y 1, ingresaste: {discount_rate})")
+        print(f"Error: invalid input: {discount_rate})")
         return False
     
     try:
         prices_list = [float(price.strip()) for price in prices_text.split(",")]
         
         if len(prices_list) == 0:
-            print("Error: invalid input (lista vacía)")
+            print("Error: invalid input")
             return False
 
         if any(price <= 0 for price in prices_list):
-            print("Error: invalid input (todos los precios deben ser mayores a 0)")
+            print("Error: invalid input")
             return False
 
         discounted_prices = apply_discount(prices_list, discount_rate)
-        
-        print(f"\nResultados:")
+
         print(f"Original prices: {prices_list}")
         print(f"Discounted prices: {[round(p, 2) for p in discounted_prices]}")
         return True
@@ -291,17 +285,17 @@ def process_discount(prices_text, discount_rate):
         print("Error: invalid input (formato incorrecto)")
         return False
 
-print("\nIngresa los precios separados por comas (ejemplo: 100,200,300,50.5):")
+print("\nEnter prices separated by commas: ")
 
-prices_text = input("Precios: ")
+prices_text = input("Prices: ")
 
 try:
-    discount_rate = float(input("Tasa de descuento (ejemplo: 0.10 para 10%): "))
+    discount_rate = float(input("Enter discount rate (0-1): "))
     
     process_discount(prices_text, discount_rate)
     
 except ValueError:
-    print("Error: invalid input (la tasa de descuento debe ser un número)")
+    print("Error: invalid input")
 
 # ============================================================================
 # PROBLEMA 5: Función de Saludo con Parámetros por Defecto
@@ -345,14 +339,12 @@ def greet(name, title=""):
     
     return f"Hello, {full_name}!"
 
-print("\nIngresa los datos para el saludo:")
+name = input("Enter name: ")
 
-name = input("Nombre: ")
+use_title = input("Do you want to add a title? (yes/no): ").strip().lower()
 
-use_title = input("¿Deseas agregar un título? (s/n): ").strip().lower()
-
-if use_title == 's':
-    title = input("Título (ejemplo: Dr., Mr., Ms., Eng., Prof.): ")
+if use_title == 'yes':
+    title = input("Title: ")
 else:
     title = ""
 
@@ -360,7 +352,7 @@ if name.strip():
     greeting = greet(name, title)
     print(f"\nGreeting: {greeting}")
 else:
-    print("Error: invalid input (el nombre no puede estar vacío)")
+    print("Error: invalid input")
 
 # ============================================================================
 # PROBLEMA 6: Función Factorial
@@ -403,26 +395,23 @@ def factorial(n):
         result *= i
     return result
 
-print("\nIngresa un número entero no negativo (hasta 20):")
+print("\nEnter a non-negative integer (0-20):")
 
 try:
-    n = int(input("Número: "))
+    n = int(input("Enter n: "))
     
     if isinstance(n, int) and 0 <= n <= 20:
         result = factorial(n)
-        print(f"\nResultados:")
         print(f"n: {n}")
         print(f"Factorial: {result}")
     else:
-        if n < 0:
-            print("Error: invalid input (el número no puede ser negativo)")
-        elif n > 20:
-            print("Error: invalid input (el número es demasiado grande, máximo 20)")
+        if n < 0 or n > 20:
+            print("Error: invalid input")
         else:
             print("Error: invalid input")
             
 except ValueError:
-    print("Error: invalid input (debes ingresar un número entero)")
+    print("Error: invalid input")
 
 """
 
