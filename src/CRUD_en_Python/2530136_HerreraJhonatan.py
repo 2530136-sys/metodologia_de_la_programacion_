@@ -310,9 +310,17 @@ References:
    https://docs.python.org/3/tutorial/controlflow.html#defining-functions
 3) Real Python - Dictionaries in Python:
    https://realpython.com/python-dicts/
+4) PEP 8 -- Style Guide for Python Code:
+   https://peps.python.org/pep-0008/
+
 """
 
-# GITHUB REPOSITORY
+
 """
+REPOSITORIO DE GITHUB
+https://github.com/2530136-sys/metodologia_de_la_programacion_
+
+DIRECTO AL ARCHIVO:
+
 
 """
