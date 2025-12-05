@@ -450,22 +450,23 @@ CONCLUSIONES
 2) Real Python - Python Functions: The Ultimate Guide:
    https://realpython.com/defining-your-own-python-function/
 
-3) Clean Code: A Handbook of Agile Software Craftsmanship - Robert C. Martin
-   (Principios para escribir funciones limpias y mantenibles)
-
-4) PEP 8 -- Style Guide for Python Code:
+3) PEP 8 -- Style Guide for Python Code:
    https://www.python.org/dev/peps/pep-0008/#function-names
 
-5) Python Tutorial - Default Argument Values:
+4) Python Tutorial - Default Argument Values:
    https://docs.python.org/3/tutorial/controlflow.html#default-argument-values
 
-6) GeeksforGeeks - Functions in Python:
+5) GeeksforGeeks - Functions in Python:
    https://www.geeksforgeeks.org/functions-in-python/
 
-7) Stack Overflow - What is a pure function?:
+6) Stack Overflow - What is a pure function?:
    https://stackoverflow.com/questions/4728073/what-is-a-pure-function
 
    
 REPOSITORIO DE GITHUB
+https://github.com/2530136-sys/metodologia_de_la_programacion_
+
+DIRECTO AL ARCHIVO:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Manejo_de_funciones_en_Python/2530136_HerreraJhonatan.py
 
 """
