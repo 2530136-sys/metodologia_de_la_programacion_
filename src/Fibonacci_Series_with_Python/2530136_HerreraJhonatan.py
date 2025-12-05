@@ -37,14 +37,14 @@ Validaciones:
 - n must be <= 50 (to prevent excessively large series)
 
 Casos de prueba:
-| Tipo     | Entrada | Salida Esperada                          | Estado |
-|----------|---------|------------------------------------------|--------|
-| Normal   | 7       | 0 1 1 2 3 5 8                            | ✓      |
-| Borde    | 1       | 0                                        | ✓      |
-| Borde    | 2       | 0 1                                      | ✓      |
-| Error    | 0       | Error: invalid input                     | ✓      |
-| Error    | abc     | Error: invalid input                     | ✓      |
-| Error    | 100     | Error: invalid input                     | ✓      |
+| Tipo     | Entrada | Salida Esperada                          |
+|----------|---------|------------------------------------------|
+| Normal   | 7       | 0 1 1 2 3 5 8                            | 
+| Borde    | 1       | 0                                        |
+| Borde    | 2       | 0 1                                      |
+| Error    | 0       | Error: invalid input                     | 
+| Error    | abc     | Error: invalid input                     | 
+| Error    | 100     | Error: invalid input                     |
 
 """
 
@@ -86,19 +86,19 @@ if __name__ == "__main__":
 
 # Diagrama de flujo:
 """
-1. Start program
-2. Read user input as string
-3. Try to convert to integer
-  - If fails: print error and exit
-4. Validate integer is between 1 and 50
-  - If invalid: print error and exit
-5. Initialize empty list for Fibonacci series
-6. Use for loop to generate n terms:
-  - First term: 0
-  - Second term: 1
-  - Subsequent terms: sum of previous two
-7. Print the generated series
-8. End program
+1. Iniciar el programa
+2. Leer la entrada del usuario como cadena
+3. Intentar convertir a entero
+- Si falla: imprimir error y salir
+4. Validar que el entero esté entre 1 y 50
+- Si no es válido: imprimir error y salir
+5. Inicializar la lista vacía de la serie de Fibonacci
+6. Usar el bucle for para generar n términos:
+- Primer término: 0
+- Segundo término: 1
+- Términos subsiguientes: suma de los dos anteriores
+7. Imprimir la serie generada
+8. Finalizar el programa
 """
 
 # CONCLUSIONES
@@ -128,8 +128,9 @@ if __name__ == "__main__":
    Available at: https://www.w3schools.com/python/python_for_loops.asp
 
 REPOSITORIO DE GITHUB
+https://github.com/2530136-sys/metodologia_de_la_programacion_
 
-
-
+DIRECTO AL ARCHIVO:
+https://github.com/2530136-sys/metodologia_de_la_programacion_/blob/main/src/Fibonacci_Series_with_Python/2530136_HerreraJhonatan.py
 
 """
